@@ -1,0 +1,25 @@
+/* Math formula styling */
+.math-formula-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  position: relative;
+  width: 100%;
+}
+
+.math-formula-display {
+  display: block;
+  overflow-x: auto;
+  text-align: center;
+}
+
+.math-formula-number {
+  position: absolute;
+  right: 1rem;
+}
+
+.math-formula-inline {
+  display: inline-block;
+  vertical-align: middle;
+}

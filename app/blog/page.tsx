@@ -74,24 +74,6 @@ const MinimalTemplate = () => {
           </header>
 
           {/* Main Content */}
-          <p className="mt-8 mb-12">
-            code helix is a personal website of Anya Korsakova, currently a
-            Computational Biology researcher at Calico Life Sciences (Alphabet).
-            Calico aims to develop novel therapeutics for age-related diseases,
-            and Anya is working on machine learning approaches to predict the
-            effects of noncoding DNA variation on the transcriptomic and
-            epigenomic state of cells, specifically focusing on indels,
-            structural variants and tandem repeats. <br />
-            <br /> Previously, Anya was a postdoctoral researcher at Cancer
-            Science Institute of Singapore, extending methods to detect
-            mutational signatures and their relationship with cancer phenotypes.{" "}
-            <br />
-            <br /> Anya earned her doctorate degree in biophysics from Nanyang
-            Technological University as a SINGA scholar, and previously her
-            B.Sc. and M.Sc. in theoretical nuclear physics from NRNU MEPhI in
-            Moscow.
-          </p>
-
           {/* Blog Posts/Updates Section with Timeline */}
           <div className="pl-2">
             {/* The container that creates the timeline effect */}

@@ -8,9 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'serif': ['Times New Roman', 'serif'],
+        'mono': ['Menlo', 'Monaco', 'Courier New', 'monospace'],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: '#f2f1e7',
+        'background-hover': '#f7f7f7',
+        foreground: '#000000',
+        'muted-foreground': '#666666',
       },
     },
   },
