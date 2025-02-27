@@ -28,7 +28,7 @@ const AboutPage = () => {
     console.log("Form submitted:", formData);
 
     // Send form data to FormSubmit
-    const response = await fetch("https://formsubmit.co/5bc137428e11bd8001cf624d9ad6619b", {
+    const response = await fetch("https://nocodeform.io/f/67c0dce049a01ed868ee73a8", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
