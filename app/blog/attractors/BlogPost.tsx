@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import MathFormula from "../../MathFormula"; // Import from the separate file
-import MathFormulaNewline from "../../MathFormulaNewline"; // Import from the separate file
 
 export default function BlogPost() {
   const formula1 = `y_i = \\tanh\\left(\\sum_{j=1}^{D} w_{ij}x_i\\right)`;
@@ -95,15 +94,15 @@ export default function BlogPost() {
           Attractors are a key concept in the study of dynamical systems that
           describe the long-term behavior of a system as it evolves towards
           equilibrium. In the context of neural networks, attractors can help us
-          visualize how the network's internal representations evolve over time
+          visualize how the network&apos;s internal representations evolve over time
           and converge to stable (or chaotic) states.
           <br />
           <br />
           In this post, I explore the concept of attractors in a simple neural
           network that is engineered as a feedback map, and discover a range of
           attractors, from limit cycles to toroidal and strange attractors. This
-          project is largely inspired by the work of J.C. Sprott "Artificial
-          Neural Net Attractors" <a href="#references">[1]</a>.
+          project is largely inspired by the work of J.C. Sprott &quot;Artificial
+          Neural Net Attractors&quot; <a href="#references">[1]</a>.
         </p>
 
         <h2
@@ -329,7 +328,7 @@ export default function BlogPost() {
         </h2>
         <ol>
           <li>
-            J.C. Sprott, "Artificial Neural Net Attractors",{" "}
+            J.C. Sprott, &quot;Artificial Neural Net Attractors&quot;,{" "}
             <em>Computers & Graphics</em>, 1998.{" "}
             <a
               href="https://doi.org/10.1016/S0097-8493(97)00089-7"

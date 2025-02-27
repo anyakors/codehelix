@@ -25,7 +25,7 @@ const MathFormula: React.FC<MathFormulaProps> = ({ formula, display = false }) =
 
   // Use span for inline (within paragraphs) and div for display mode
   return display ? (
-    <span ref={containerRef as any} className="math-formula-block" />
+    <span ref={containerRef} className="math-formula-block" />
   ) : (
     <span ref={containerRef} className="math-formula-inline" />
   );

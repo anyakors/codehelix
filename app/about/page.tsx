@@ -22,17 +22,31 @@ const AboutPage = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would normally handle the form submission to your backend
     console.log("Form submitted:", formData);
-    setFormSubmitted(true);
-    // Reset form after submission
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
+
+    // Send form data to FormSubmit
+    const response = await fetch("https://formsubmit.co/anya@calicolabs.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
     });
+
+    if (response.ok) {
+      setFormSubmitted(true);
+      // Reset form after submission
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      console.error("Form submission failed");
+    }
   };
 
   return (
@@ -58,6 +72,7 @@ const AboutPage = () => {
               <Link
                 href="/"
                 className="underline underline-offset-8 hover:decoration-2 hover:decoration-black/50 hover:text-black/70"
+                onSubmit={handleSubmit}
               >
                 Home
               </Link>
@@ -98,16 +113,13 @@ const AboutPage = () => {
                 <p className="mb-6">
                   code helix is a personal website of Anya Korsakova, currently
                   a Computational Biology researcher at Calico Life Sciences
-                  (Alphabet). The name code helix hints that DNA is a code - 
-                  the code of life that can be fully decoded for the benefit 
-                  of humanity.
-
+                  (Alphabet). The name code helix hints that DNA is a code - the
+                  code of life that can be fully decoded for the benefit of
+                  humanity.
                   <br />
-                  <br />
-                  
-                  I am always happy to connect with like-minded folks 
-                  and discuss the latest trends in computational biology, machine learning,
-                  and quantitative financial market analysis. 
+                  <br />I am always happy to connect with like-minded folks and
+                  discuss the latest trends in computational biology, machine
+                  learning, and quantitative financial market analysis.
                 </p>
               </div>
             </div>
@@ -184,14 +196,10 @@ const AboutPage = () => {
             <h2 className="text-lg font-serif mb-4">Get in Touch</h2>
             {formSubmitted ? (
               <div className="p-4 bg-green-50 border border-green-500 text-green-700">
-                Thank you for your message! I'll get back to you soon.
+                Thank you for your message! I&apos;ll get back to you soon.
               </div>
             ) : (
-              <form
-                action="https://formsubmit.co/anya@calicolabs.com"
-                method="POST"
-                className="space-y-4"
-              >
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block mb-1">
                     Name

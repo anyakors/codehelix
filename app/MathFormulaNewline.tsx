@@ -30,7 +30,7 @@ const MathFormulaNewline: React.FC<MathFormulaProps> = ({
   if (display) {
     return (
       <span className="math-formula-container">
-        <span className="math-formula-display" ref={containerRef as any} />
+        <span className="math-formula-display" ref={containerRef} />
       </span>
     );
   }
