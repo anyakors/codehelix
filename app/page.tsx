@@ -5,7 +5,7 @@ const MinimalTemplate = () => {
   // Sample blog posts data - you can replace this with your actual posts
   const posts = [
     {
-      title: "Attractors in simple neural networks: chaos and beauty",
+      title: "Attractors in neural network maps: chaos and beauty",
       date: "December 1, 2024",
       description:
         "A fun revamped project on attractors in NNs. Winner of the CoSScience Art Award during my PhD years.",
@@ -255,7 +255,7 @@ const MinimalTemplate = () => {
               Art of Academia podcast: discussing computational biology and physics, biology, AI/ML pivots
             </p>
           </div>
-          
+
           <div className="mb-8">
             <div className="aspect-video w-full overflow-hidden border border-[#2f2f2f] shadow-[3px_3px_0px_#2f2f2f] bg-white">
               <iframe

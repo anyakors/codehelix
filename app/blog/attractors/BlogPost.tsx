@@ -53,7 +53,7 @@ export default function BlogPost() {
 
         {/* Post Title */}
         <h1 className="text-5xl md:text-6xl font-serif mb-6 text-balance">
-          Attractors in neural networks
+          Attractors in neural network maps: chaos and beauty
         </h1>
       </div>
 

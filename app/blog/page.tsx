@@ -5,7 +5,7 @@ const MinimalTemplate = () => {
   // Sample blog posts data - you can replace this with your actual posts
   const posts = [
     {
-      title: "Attractors in simple neural networks: chaos and beauty",
+      title: "Attractors in neural network maps: chaos and beauty",
       date: "December 1, 2024",
       description:
         "A fun revamped project on attractors in NNs. Winner of the CoSScience Art Award during my PhD years.",
