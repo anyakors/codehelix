@@ -117,6 +117,11 @@ const AboutPage = () => {
                   code of life that can be fully decoded for the benefit of
                   humanity.
                   <br />
+                  <br />
+                  Apart from the computational biology research, I am interested in financial market forecasting.
+                  I spent some time developing quantitative trading robots for the stock market and forex; I am 
+                  happy to collaborate on projects in this area. In my free time, I enjoy pole acrobatics.
+                  <br />
                   <br />I am always happy to connect with like-minded folks and
                   discuss the latest trends in computational biology, machine
                   learning, and quantitative financial market analysis.

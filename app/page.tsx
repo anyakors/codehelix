@@ -13,6 +13,70 @@ const MinimalTemplate = () => {
     },
   ];
 
+  // Project data - structured for visual consistency
+  const projects = [
+    {
+      title: "Sparse autoencoders for mechanistic interpretability of the DNA sequence-based model Borzoi @ f(DNA) Calico",
+      description: "Large ML frameworks, such as the DNA sequence-based model Borzoi, ingest large amounts of data for training. Training data contain multitudes of features, and as the model is successful at inference tasks, it has extracted these features from sequence. We aim to use sparse autoencoders to decompose activations from the first few layers of the pre-trained model into monosemantic concepts that map to known and unknown transcriptional regulatory motifs.",
+      links: [
+        { text: "github", url: "https://github.com/anyakors/sae_borzoi" }
+      ]
+    },
+    {
+      title: "Shift augmentation for improved indel scoring in DNA sequence-based ML models @ f(DNA) Calico",
+      description: "Predicting genetic variant effects is critical for medical genetics. DNA sequence-based deep learning models attain SOTA performance, but generally focus on single-nucleotide polymorphisms, and technical challenges (such as misalignment of pooling blocks and output boundaries) create artificially inflated variant effect scores on another common type of mutations - insertions and deletions (indels). We suggested and demonstrated that boundary-aware stitching significantly improved scoring for indels, structural variants and tandem repeats.",
+      links: [
+        { text: "manuscript to be submitted", url: null }
+      ]
+    },
+    {
+      title: "ALPS (Assignment of Local Probabilities for SBS Signatures) @ Pitt Genomics, CSI",
+      description: "ALPS is a probabilistic framework for assignment of single-base substitution (SBS) mutational signature enrichments to genomic and epigenomic features of interest. ALPS was developed to address the challenge of localizing mutational signatures in cancer genomes, where signature assignment does not take into account mutation coordinate information. However, signatures often colocalize with epigenomic features, and ALPS uses a simple probabilistic framework to assign SBS signatures back to genome regions.",
+      links: [
+        { text: "gitlab", url: "https://gitlab.com/PittGenomics/alps" }
+      ]
+    },
+    {
+      title: "Mutational signature assignment heterogeneity addressed by ensemble approaches @ Pitt Genomics, CSI",
+      description: "Collaborated with the Pitt Genomics team to consult on the best algorithmic practices for building ensemble approaches to mutational signature assignment.",
+      links: [
+        { text: "website", url: "https://www.ensemblefit.pittlabgenomics.com/" },
+        { text: "paper", url: "https://academic.oup.com/bib/article/24/6/bbad331/7280728" }
+      ]
+    },
+    {
+      title: "Prediction of G4 formation in live cells with epigenetic data: a deep learning approach @ Phan Biophysics, NTU",
+      description: "G-quadruplexes (G4s) are secondary structures abundant in DNA that play regulatory roles in cells. Only a small fraction forms G4 structures form in cells from the putative sequences. I approached the prediction of G4 formation by adding channels of the normalized epigenetic and chromatin accessibility data on top of the one-hot-encoded DNA sequence input channels with a deep vanilla CNN.",
+      links: [
+        { text: "github", url: "https://github.com/anyakors/epiG4NN" },
+        { text: "paper", url: "https://academic.oup.com/nargab/article/5/3/lqad071/7249922" }
+      ]
+    },
+    {
+      title: "RNA alternative splicing prediction with discrete compositional energy network @ Phan Biophysics, NTU",
+      description: "A single gene can encode for different protein versions through alternative splicing. Alternative splicing is determined by the gene's primary sequence and other regulatory factors such as RNA-binding protein levels. With these as input, we formulated the prediction of RNA splicing as a regression task, and proposed a discrete compositional energy network (DCEN) which leverages the hierarchical relationships between splice sites, junctions and transcripts. We built a new training and benchmarking dataset (CAPD), which is my main contribution here.",
+      links: [
+        { text: "github", url: "https://github.com/anyakors/CAPD_CHIL2021" },
+        { text: "paper", url: "https://dl.acm.org/doi/pdf/10.1145/3450439.3451857" }
+      ]
+    },
+    {
+      title: "RNA G-quadruplex detection using Oxford nanopore sequencing @ Phan Biophysics, NTU",
+      description: "RNA G-quadruplex (rG4) structures are challenging to detect in long RNA transcripts. We used Oxford Nanopore sequencing to probe rG4 signatures in synthetic RNA constructs and native RNA transcripts. The nanopore current signature utility uses a z-score based method to detect G4 stalling events. The project did not reach enough maturity to publish it, but I learned a lot (and did quite a bit of wet lab experiments) along the way!",
+      links: [
+        { text: "github", url: "https://github.com/anyakors/porebump" },
+        { text: "draft", url: "https://github.com/anyakors/porebump/blob/master/data/nanopore_rG4.pdf" }
+      ]
+    },
+    {
+      title: "Attractors in neural network maps",
+      description: "This little project was done for the Nonlinear Dynamics course at NTU and features aesthetic attractors forming in an MLP-turned-dynamic-map.",
+      links: [
+        { text: "github", url: "https://github.com/anyakors/neural_attractors" }
+      ]
+    }
+  ];
+
   {
     /*
       title: "Latest Research Update",
@@ -93,6 +157,8 @@ const MinimalTemplate = () => {
           </p>
 
           {/* Blog Posts/Updates Section with Timeline */}
+          <h2 className="text-lg mb-6 mt-12">Blog</h2>
+
           <div className="pl-2">
             {/* The container that creates the timeline effect */}
             <div
@@ -129,6 +195,81 @@ const MinimalTemplate = () => {
                 </Link>
               ))}
             </div>
+          </div>
+
+          {/* Projects section - Redesigned */}
+          <h2 className="text-lg mb-6 mt-12">Projects</h2>
+          <div className="space-y-6">
+            {projects.map((project, index) => (
+              <div 
+                key={index} 
+                className="flex flex-col gap-2 px-4 py-3
+                         bg-white border border-[#2f2f2f] shadow-[3px_3px_0px_#2f2f2f] 
+                         hover:border-[#008bf3] hover:shadow-[5px_5px_0px_#008bf3] 
+                         transition-all hover:bg-white"
+              >
+                <h3 className="text-base font-bold">{project.title}</h3>
+                <p className="text-xs text-gray-800">
+                  {project.description}
+                </p>
+                <div className="flex gap-3 mt-1">
+                  {project.links.map((link, linkIndex) => (
+                    link.url ? (
+                      <a 
+                        key={linkIndex} 
+                        href={link.url} 
+                        className="text-blue-500 font-bold text-xs hover:underline"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        [{link.text}]
+                      </a>
+                    ) : (
+                      <span key={linkIndex} className="font-bold text-xs">
+                        [{link.text}]
+                      </span>
+                    )
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Media section */}
+          <h2 className="text-lg mb-6 mt-12">Media</h2>
+
+          {/* Spotify Podcast */}
+          <div className="mb-8">
+            <div className="w-full overflow-hidden border border-[#2f2f2f] shadow-[3px_3px_0px_#2f2f2f] bg-white">
+              <iframe 
+                className="w-full" 
+                style={{height: "352px"}}
+                src="https://open.spotify.com/embed/episode/0WtAP3POmuJQNppueKY268?utm_source=generator" 
+                frameBorder="0" 
+                allowFullScreen 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy"
+              ></iframe>
+            </div>
+            <p className="text-xs mt-2 text-gray-600">
+              Art of Academia podcast: discussing computational biology and physics, biology, AI/ML pivots
+            </p>
+          </div>
+          
+          <div className="mb-8">
+            <div className="aspect-video w-full overflow-hidden border border-[#2f2f2f] shadow-[3px_3px_0px_#2f2f2f] bg-white">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/Miz3X953Q-0"
+                title="Lecture by Anya Korsakova"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <p className="text-xs mt-2 text-gray-600">
+              Invited lecture at the Traektoriya school (Armenia, 2019): on DNA Oxford Nanopore sequencing (in Russian, auto-generated English subtitles available)
+            </p>
           </div>
 
           {/* Footer */}

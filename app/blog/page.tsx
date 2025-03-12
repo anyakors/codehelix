@@ -54,13 +54,13 @@ const MinimalTemplate = () => {
             <div className="flex gap-4">
               <Link
                 href="/"
-                className="underline underline-offset-8 hover:decoration-2 decoration-2 hover:decoration-black hover:text-black"
+                className="underline underline-offset-8 hover:decoration-2 hover:decoration-black/50 hover:text-black/70"
               >
                 Home
               </Link>
               <Link
                 href="/blog"
-                className="underline underline-offset-8 hover:decoration-2 hover:decoration-black/50 hover:text-black/70"
+                className="underline underline-offset-8 hover:decoration-2 decoration-2 hover:decoration-black hover:text-black"
               >
                 Blog
               </Link>
