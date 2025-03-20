@@ -1,5 +1,5 @@
 {
-  "name": "your-site",
+  "name": "code-helix",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,13 +14,15 @@
     "katex": "^0.16.21",
     "next": "15.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.16",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "postcss": "^8",

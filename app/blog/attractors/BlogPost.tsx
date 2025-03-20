@@ -1,6 +1,9 @@
+"use client"
+
 import React from "react";
 import Link from "next/link";
 import MathFormula from "../../MathFormula"; // Import from the separate file
+import NeuralAttractorWidget from '../../../components/NeuralAttractorWidget';
 
 export default function BlogPost() {
   const formula1 = `y_i = \\tanh\\left(\\sum_{j=1}^{D} w_{ij}x_i\\right)`;
@@ -86,6 +89,10 @@ export default function BlogPost() {
         </div>
       </div>
 
+      <div className="container mx-auto p-4">
+        <NeuralAttractorWidget />
+      </div>
+      
       {/* Main Content */}
       <div className="prose max-w-3xl mx-auto">
         <p>
