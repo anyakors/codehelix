@@ -23,10 +23,10 @@ const MinimalTemplate = () => {
       ]
     },
     {
-      title: "Shift augmentation for improved indel scoring in DNA sequence-based ML models @ f(DNA) Calico",
+      title: "Shift augmentation improves DNA convolutional neural network indel effect predictions @ f(DNA) Calico",
       description: "Predicting genetic variant effects is critical for medical genetics. DNA sequence-based deep learning models attain SOTA performance, but generally focus on single-nucleotide polymorphisms, and technical challenges (such as misalignment of pooling blocks and output boundaries) create artificially inflated variant effect scores on another common type of mutations - insertions and deletions (indels). We suggested and demonstrated that boundary-aware stitching significantly improved scoring for indels, structural variants and tandem repeats.",
       links: [
-        { text: "manuscript to be submitted", url: null }
+        { text: "preprint", url: "https://www.biorxiv.org/content/10.1101/2025.04.07.647656v1" }
       ]
     },
     {
