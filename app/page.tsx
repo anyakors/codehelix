@@ -5,6 +5,13 @@ const MinimalTemplate = () => {
   // Sample blog posts data - you can replace this with your actual posts
   const posts = [
     {
+      title: "How to improve DNA convnet predictions for indels, structural variants and tandem repeats",
+      date: "April 22, 2025",
+      description:
+        "Insertions and deletions comprise 25% of all common variants in the genome, but predicting the effects of indels on expression and epigenome is technically challenging. Clever augmentation techniques fix this.",
+      link: "/blog/indels",
+    },
+    {
       title: "Attractors in neural network maps: chaos and beauty",
       date: "December 1, 2024",
       description:
