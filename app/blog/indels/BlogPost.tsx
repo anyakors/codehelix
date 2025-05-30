@@ -79,7 +79,7 @@ export default function BlogPost() {
                 target="_blank"
                 className="!text-foreground underline underline-offset-2"
               >
-                <span>biorXiv</span>
+                <span>bioRxiv</span>
               </a>
             </div>
           </div>
